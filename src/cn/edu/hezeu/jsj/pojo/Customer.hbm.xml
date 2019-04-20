@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+  <hibernate-mapping  package="cn.edu.hezeu.jsj.pojo">
+   <class name="Customer"  table="customer">
+   <id name="id" column="id">
+   		<generator class="native"></generator>
+   </id>
+   
+   <property name="age" column="age" type="int"/>
+   
+   <property name="diverid" column="diverid" type="string" />
+   
+   <property name="driverType" column="drivertype" type="string" />
+   
+   <property name="email" column="email" type="string"/>
+   
+   <property name="home" column="home" type="string" />
+   
+   <property name="idCard" column="idcard" type="string" />
+   
+   <property name="name" column="name" type="string" />
+   
+   <property name="pwd" column="pwd" type="string" />
+   
+   <property name="remark" column="remark" type="string" />
+   
+   <property name="sex" column="sex" type="string" />
+   
+   <property name="tel" column="tel" type="string" />
+   
+   <property name="username" column="username"/>
+   
+   <set name="order" fetch="join" cascade="all">
+   	<key column="car_id"></key>
+   	<one-to-many class="Order"/>
+   </set>
+  
+   </class>
+  </hibernate-mapping>
