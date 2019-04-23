@@ -28,6 +28,10 @@ public class Car {
 	private int rentCount;
 	/***图片路径*/
 	private String imagePath;
+	/***品牌*/
+	private Brand brand;
+	/***车型*/
+	private String vehicleClass;
 	/***车辆订单*/
 	private Set<Order> order;
 	public Car() {
@@ -50,6 +54,39 @@ public class Car {
 		this.rentCount = rentCount;
 	}
 	
+	
+	public Car(String carNo, String carLicense, String factury, Date date,
+			String state, String isRent, String color, Double mrentalPrice,
+			Double drentalprice, int rentCount, String imagePath, Brand brand,
+			String vehicleClass) {
+		super();
+		this.carNo = carNo;
+		this.carLicense = carLicense;
+		this.factury = factury;
+		this.date = date;
+		this.state = state;
+		this.isRent = isRent;
+		this.color = color;
+		this.mrentalPrice = mrentalPrice;
+		this.drentalprice = drentalprice;
+		this.rentCount = rentCount;
+		this.imagePath = imagePath;
+		this.brand = brand;
+		this.vehicleClass = vehicleClass;
+	}
+	
+	public String getVehicleClass() {
+		return vehicleClass;
+	}
+	public void setVehicleClass(String vehicleClass) {
+		this.vehicleClass = vehicleClass;
+	}
+	public Brand getBrand() {
+		return brand;
+	}
+	public void setBrand(Brand brand) {
+		this.brand = brand;
+	}
 	public Set<Order> getOrder() {
 		return order;
 	}

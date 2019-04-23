@@ -48,6 +48,7 @@
 			<value>cn/edu/hezeu/jsj/pojo/Customer.hbm.xml</value>
 			<value>cn/edu/hezeu/jsj/pojo/Order.hbm.xml</value>
 			<value>cn/edu/hezeu/jsj/pojo/User.hbm.xml</value>
+			<value>cn/edu/hezeu/jsj/pojo/Brand.hbm.xml</value>
 		</list>
 	</property>
 	<!-- 设置Hibernate的属性 -->
@@ -130,6 +131,14 @@
     <!-- UserService -->
     <bean id="userService" class="cn.edu.hezeu.jsj.service.Impl.UserServiceImpl">
     	<property name="userDao" ref="userDao"></property>
+    </bean>
+            <!-- BrandDao -->
+    <bean id="brandDao" class="cn.edu.hezeu.jsj.dao.Impl.BrandDaoImpl">
+    	<property name="hibernateTemplate" ref="hibernateTemplate"></property>
+    </bean>
+    <!--BrandService -->
+    <bean id="brandService" class="cn.edu.hezeu.jsj.service.Impl.BrandServiceImpl">
+    	<property name="brandDao" ref="brandDao"></property>
     </bean>
     
     
