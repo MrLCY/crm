@@ -48,6 +48,7 @@
 			<value>cn/edu/hezeu/jsj/pojo/Customer.hbm.xml</value>
 			<value>cn/edu/hezeu/jsj/pojo/Order.hbm.xml</value>
 			<value>cn/edu/hezeu/jsj/pojo/User.hbm.xml</value>
+			<value>cn/edu/hezeu/jsj/pojo/Brand.hbm.xml</value>
 		</list>
 	</property>
 	<!-- 设置Hibernate的属性 -->
@@ -81,6 +82,8 @@
     	<property name="adminDao" ref="adminDao"></property>
     </bean>
     
+    
+    
     <!-- OrderDao -->
     <bean id="orderDao" class="cn.edu.hezeu.jsj.dao.Impl.OrderDaoImpl">
     	<property name="hibernateTemplate" ref="hibernateTemplate"></property>
@@ -89,6 +92,56 @@
     <bean id="orderService" class="cn.edu.hezeu.jsj.service.Impl.OrderServiceImpl">
     	<property name="orderDao" ref="orderDao"></property>
     </bean>
-   
+    
+    
+        <!-- CarDao -->
+    <bean id="carDao" class="cn.edu.hezeu.jsj.dao.Impl.CarDaoImpl">
+    	<property name="hibernateTemplate" ref="hibernateTemplate"></property>
+    </bean>
+    <!-- CarService -->
+    <bean id="carService" class="cn.edu.hezeu.jsj.service.Impl.CarServiceImpl">
+    	<property name="carDao" ref="carDao"></property>
+    </bean>
+    
+    
+        <!-- CostDao -->
+    <bean id="costDao" class="cn.edu.hezeu.jsj.dao.Impl.CostDaoImpl">
+    	<property name="hibernateTemplate" ref="hibernateTemplate"></property>
+    </bean>
+    <!-- CostService -->
+    <bean id="costService" class="cn.edu.hezeu.jsj.service.Impl.CostServiceImpl">
+    	<property name="costDao" ref="costDao"></property>
+    </bean>
+    
+    
+        <!-- CustomerDao -->
+    <bean id="customerDao" class="cn.edu.hezeu.jsj.dao.Impl.CustomerDaoImpl">
+    	<property name="hibernateTemplate" ref="hibernateTemplate"></property>
+    </bean>
+    <!-- CustomerService -->
+    <bean id="customerService" class="cn.edu.hezeu.jsj.service.Impl.CustomerServiceImpl">
+    	<property name="customerDao" ref="customerDao"></property>
+    </bean>
+    
+    
+        <!-- UserDao -->
+    <bean id="userDao" class="cn.edu.hezeu.jsj.dao.Impl.UserDaoImpl">
+    	<property name="hibernateTemplate" ref="hibernateTemplate"></property>
+    </bean>
+    <!-- UserService -->
+    <bean id="userService" class="cn.edu.hezeu.jsj.service.Impl.UserServiceImpl">
+    	<property name="userDao" ref="userDao"></property>
+    </bean>
+            <!-- BrandDao -->
+    <bean id="brandDao" class="cn.edu.hezeu.jsj.dao.Impl.BrandDaoImpl">
+    	<property name="hibernateTemplate" ref="hibernateTemplate"></property>
+    </bean>
+    <!--BrandService -->
+    <bean id="brandService" class="cn.edu.hezeu.jsj.service.Impl.BrandServiceImpl">
+    	<property name="brandDao" ref="brandDao"></property>
+    </bean>
+    
+    
+   <!-- Action配置区 -->
    
 </beans>

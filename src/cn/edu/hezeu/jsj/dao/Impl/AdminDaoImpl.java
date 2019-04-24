@@ -13,7 +13,7 @@ public class AdminDaoImpl implements AdminDao {
 	private HibernateTemplate hibernateTemplate = null;
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Admin admin = new Admin("admin","admin");
+		Admin admin = new Admin("admin1","admin");
 		AdminDao admindao = (AdminDao) ctx.getBean("adminDao");
 		admindao.addAdmin(admin);
 	}

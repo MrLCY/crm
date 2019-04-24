@@ -30,6 +30,10 @@
    
    <property name="state" column="state" type="string" />
    
+   <many-to-one name="brand" column="brand_id" class="Brand" cascade="save-update"/>
+   
+   <property name="vehicleClass" column="vehicleclass" type="string"/>
+   
    <set name="order" fetch="join" cascade="all">
    	<key column="car_id"></key>
    	<one-to-many class="Order"/>
