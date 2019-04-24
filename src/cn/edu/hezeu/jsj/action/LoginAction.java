@@ -10,4 +10,7 @@ public class LoginAction {
 			</action>
 
 	 */
+	
+	@SuppressWarnings("unused")
+	private int a;
 }

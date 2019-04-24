@@ -18,7 +18,7 @@ public class AdminDaoImpl implements AdminDao {
 		admindao.addAdmin(admin);
 	}
 
-	@Override
+	
 	public void addAdmin(Admin admin) {
 		hibernateTemplate.save(admin);
 		

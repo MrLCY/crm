@@ -19,7 +19,7 @@ public class OrderDaoImpl implements OrderDao {
 		this.hibernateTemplate = hibernateTemplate;
 	}
 
-	@Override
+	
 	public void addOrder(Order order) {
 		hibernateTemplate.save(order);
 		
