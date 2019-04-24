@@ -20,31 +20,26 @@ public class CarDaoImpl implements CarDao {
 		this.hibernateTemplate = hibernateTemplate;
 	}
 
-	@Override
 	public void addCar(Car car) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void deleteCar(int carId) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public List<Car> getCarList() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public Car getOneCar(int carId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public void updateCar(Car car) {
 		// TODO Auto-generated method stub
 		

@@ -14,13 +14,11 @@ import cn.edu.hezeu.jsj.pojo.Customer;
 
 public class CustomerDaoImpl implements CustomerDao {
 	private HibernateTemplate hibernateTemplate;
-	@Override
 	public void addCustomer(Customer customer) {
 		
 		 hibernateTemplate.save(customer);
 	}
 
-	@Override
 	public List<Customer> getCustomerList(int pageNo,int pageSize) {
 		Session session = hibernateTemplate.getSessionFactory().openSession();
 		Criteria criteria = session.createCriteria(Customer.class);
@@ -39,13 +37,11 @@ public class CustomerDaoImpl implements CustomerDao {
 		this.hibernateTemplate = hibernateTemplate;
 	}
 
-	@Override
 	public Customer getOneCustomer(int customerId) {
 	
 		return hibernateTemplate.get(Customer.class, customerId);
 	}
 
-	@Override
 	public void updateCustomer(Customer customer) {
 		hibernateTemplate.update(customer);
 		
